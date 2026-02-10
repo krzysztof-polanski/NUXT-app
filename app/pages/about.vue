@@ -9,12 +9,8 @@
   </div> -->
 </template>
 
-<script setup>
-// definePageMeta({
-//   layout: 'default',
-// })
-
-// const enableCustomLayout = () => {
-//   setPageLayout('another')
-// }
+<script setup lang="ts">
+useHead({
+  title: 'About me'
+})
 </script>

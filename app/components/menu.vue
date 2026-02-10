@@ -15,9 +15,9 @@
       </li>
       <li>
         <nuxt-link
-          to="/blog"
+          to="/projects"
           class="link"
-        >Blog</nuxt-link>
+        >Projects</nuxt-link>
       </li>
     </ul>
   </nav>
