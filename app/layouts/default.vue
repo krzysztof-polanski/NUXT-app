@@ -12,6 +12,12 @@
 </template>
 
 <script setup lang="ts">
+const colorMode = useColorMode()
+
+const changeColorMode = (mode: 'light' | 'dark' | 'system'): void => {
+  colorMode.preference = mode
+}
+
 useHead({
   titleTemplate: '%s - Krzysztof Polański',
   link: [
@@ -26,10 +32,16 @@ useHead({
     },
   ],
 })
+onBeforeMount(() => {
+  changeColorMode('system')
+})
 </script>
 
 <style>
 body {
   font-family: 'Roboto', sans-serif;
+}
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300;
 }
 </style>
