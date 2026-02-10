@@ -1,0 +1,6 @@
+{
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "github.copilot.nextEditSuggestions.enabled": false
+}
