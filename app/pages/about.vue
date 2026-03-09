@@ -1,16 +1,12 @@
 <template>
-  <div>
-    <h1>This page is about me</h1>
-  </div>
-  <!-- <div>
-    <button @click="enableCustomLayout">
-      Update layout
-    </button>
-  </div> -->
+  <article class="prose dark:prose-invert prose-h1:text-2xl">
+    <ContentRenderer :value="doc"/>
+  </article>
 </template>
 
-<script setup lang="ts">
-useHead({
-  title: 'About me'
-})
+<script setup>
+const route = useRoute()
+const { data: doc } = await useAsyncData(route.path, () =>
+  queryCollection('content').path(route.path).first()
+)
 </script>
